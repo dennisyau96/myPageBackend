@@ -12,25 +12,16 @@ const uri = process.env.URI2;
 
 //usefule middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://mypagebackend-eg0j.onrender.com",
+    ],
+  })
+);
 app.use("/api", router);
 
-// The current database to use.
-//new way to connect mongodb
-// const client = new MongoClient(process.env.URI2);
-
-// async function run() {
-//   const connect = client.connect();
-
-//   app.listen(port, () => {
-//     console.log(`connect to port ${port}.`);
-//   });
-//   const db = client.db("Profile");
-//   const collection = db.collection("Profile");
-// }
-// run();
-
-//old version mongodb conneciton
 mongoose
   .connect(uri)
   .then(() => {

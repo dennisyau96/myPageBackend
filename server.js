@@ -14,10 +14,8 @@ const uri = process.env.URI2;
 app.use(express.json());
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://mypagebackend-n0m8.onrender.com",
-    ],
+    credentials: true,
+    origin: ["http://localhost:3000", "https://frontend-3eyf.onrender.com"],
   })
 );
 app.use("/api", router);

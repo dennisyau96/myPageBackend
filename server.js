@@ -8,7 +8,7 @@ const { MongoClient } = require("mongodb");
 dotenv.config();
 
 const port = process.env.PORT;
-const uri = process.env.URI2;
+const uri = process.env.URI3;
 
 //usefule middleware
 app.use(express.json());

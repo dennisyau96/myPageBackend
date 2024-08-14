@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 const projectSchema = new schema({
-  Name: { type: String, required: true },
-  Type: { type: String },
-  Website: { type: String, required: true },
-  Role: { type: String, required: true },
-  Remarks: { type: String, require: false },
+  name: { type: String, required: true },
+  type: { type: String },
+  website: { type: String, required: true },
+  role: { type: String, required: true },
+  remarks: { type: String, require: false },
+  thumbnail: { type: String, required: false },
 });
 
 const Project = mongoose.model("Project", projectSchema);

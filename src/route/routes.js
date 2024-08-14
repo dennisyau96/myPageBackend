@@ -11,7 +11,7 @@ const router = express.Router();
 // const myColleciton = mongoose.Collection("test");
 
 //experience
-router.get("/experience", async (req, res) => {
+router.get("/experiences", async (req, res) => {
   try {
     const data = await Experience.find();
     res.json(data);
@@ -22,7 +22,7 @@ router.get("/experience", async (req, res) => {
 
 //education
 
-router.get("/education", async (req, res) => {
+router.get("/educations", async (req, res) => {
   try {
     const data = await Education.find();
     res.json(data);

@@ -2,6 +2,7 @@ const express = require("express");
 const Experience = require("../model/experience.model");
 const Education = require("../model/education.model");
 const Skill = require("../model/skill.model");
+const Project = require("../model/project.model");
 const Comment = require("../model/comment.model");
 const mongoose = require("mongoose");
 
@@ -34,6 +35,16 @@ router.get("/education", async (req, res) => {
 router.get("/skills", async (req, res) => {
   try {
     const data = await Skill.find();
+    res.json(data);
+  } catch (err) {
+    return res.json({ error: err.message });
+  }
+});
+
+//projects
+router.get("/projects", async (req, res) => {
+  try {
+    const data = await Project.find();
     res.json(data);
   } catch (err) {
     return res.json({ error: err.message });

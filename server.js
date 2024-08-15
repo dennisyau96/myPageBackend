@@ -19,7 +19,7 @@ app.use(
       "http://localhost:3000",
       "http://localhost:5173",
       "https://mypagebackend-n0m8.onrender.com",
-      "https://mypagefrontend-2.onrender.com",
+      "https://dennisyau-intro.onrender.com",
     ],
   })
 );

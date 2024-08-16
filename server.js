@@ -15,7 +15,11 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:5173", "https://dennisyau-intro.onrender.com"],
+    origin: [
+      "http://localhost:5173",
+      "https://dennisyau-intro.onrender.com",
+      "https://github.com/dennisyau96/myPageFrontend/tree/d965d5a1be9fff2ce18f7da6230580630c899c12/src",
+    ],
   })
 );
 app.use("/api", router);

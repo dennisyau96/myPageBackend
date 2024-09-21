@@ -24,7 +24,7 @@ router.get("/experiences", async (req, res) => {
 
 router.get("/educations", async (req, res) => {
   try {
-    const data = await Education.find();
+    const data = await Education.fillAll();
     res.json(data);
   } catch (err) {
     return res.json({ error: err.message });

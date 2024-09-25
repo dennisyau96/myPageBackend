@@ -4,7 +4,7 @@ const experienceSchema = new schema({
   position: { type: String },
   organization: { type: String },
   period: { type: String },
-  description: { type: String },
+  description: { type: Array },
   location: { type: String },
 });
 
